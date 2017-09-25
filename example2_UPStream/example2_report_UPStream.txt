@@ -1,0 +1,106 @@
+******************************************************************
+*                        U P S t r e a m                         *
+* Automated Hydraulic Design of Pressurized Water Supply Networks*
+*           (Based on EPANET 2.0 Computational Engine)           *
+*            Stergios Emmanouil and Andreas Langousis            *
+*                Department of Civil Engineering                 *
+*                 University of Patras, Greece                   *
+******************************************************************
+/example2.inp
+      Number of Junctions................ 18
+      Number of Reservoirs............... 3
+      Number of Tanks ................... 0
+      Number of Pipes ................... 26
+      Number of Pumps ................... 0
+      Number of Valves .................. 0
+      Headloss Formula .................. Darcy-Weisbach
+      Hydraulic Timestep ................ 1.00 hrs
+      Hydraulic Accuracy ................ 0.001000
+      Status Check Frequency ............ 2
+      Maximum Trials Checked ............ 10
+      Damping Limit Threshold ........... 0.000000
+      Maximum Trials .................... 40
+      Quality Analysis .................. None
+      Specific Gravity .................. 1.00
+      Relative Kinematic Viscosity ...... 1.00
+      Relative Chemical Diffusivity ..... 1.00
+      Demand Multiplier ................. 1.00
+      Total Duration .................... 0.00 hrs
+      Reporting Criteria:
+         All Nodes
+         All Links
+   
+   
+  Node Results:
+  --------------------------------------------------------
+                  Elevation    Demand      Head  Pressure
+  Node                    m       L/s         m         m
+  --------------------------------------------------------
+  2                   46.00      0.34     58.29     12.29
+  3                   33.00      1.52     53.72     20.72
+  4                   26.00      1.64     48.38     22.38
+  5                   19.00      1.52     42.99     23.99
+  6                   14.00      0.92     36.79     22.79
+  7                   10.00      4.32     33.34     23.34
+  8                    0.00      3.28     27.13     27.13
+  9                    4.00      1.80     25.37     21.37
+  10                   0.00      6.56     24.28     24.28
+  11                   0.00      8.70     22.06     22.06
+  12                  10.00     10.66     30.04     20.04
+  13                  19.00      6.12     36.94     17.94
+  14                  26.00      2.14     41.33     15.33
+  15                  33.00      7.68     45.15     12.15
+  16                  10.00     11.32     30.71     20.71
+  17                  19.00      5.30     37.98     18.98
+  18                   0.00      5.74     16.12     16.12
+  19                   0.00      2.36     13.02     13.02
+  1                   60.00    -47.43     60.00     -0.00  Reservoir
+  20                  40.00    -18.74     40.00      0.00  Reservoir
+  21                  40.00    -15.76     40.00      0.00  Reservoir
+   
+   
+  Link Results:
+  ----------------------------------------------------------------------------
+                     Length  Diameter      Flow  Velocity  Headloss  F-Factor
+  Link                    m        mm       L/s       m/s    /1000m          
+  ----------------------------------------------------------------------------
+  1                  190.00    220.00     47.43      1.25      9.01     0.025
+  2                  180.00    180.00     47.09      1.85     25.38     0.026
+  3                  155.00    150.00     33.92      1.92     34.48     0.028
+  4                  140.00    140.00     29.85      1.94     38.44     0.028
+  5                  120.00     70.00      5.49      1.43     51.68     0.035
+  6                  130.00    130.00     20.32      1.53     26.51     0.029
+  7                  250.00    100.00      9.80      1.25     24.86     0.031
+  8                  135.00     60.00      1.80      0.64     13.03     0.038
+  9                  150.00     80.00      4.72      0.94     19.01     0.034
+  10                 150.00     90.00      5.68      0.89     14.79     0.033
+  11                 250.00    100.00    -11.12      1.42     31.91     0.031
+  12                 250.00    130.00    -20.74      1.56     27.60     0.029
+  13                 140.00     70.00     -4.26      1.11     31.38     0.035
+  14                 140.00     70.00     -3.97      1.03     27.27     0.035
+  15                 245.00    100.00     11.65      1.48     34.98     0.031
+  16                 300.00     60.00      2.43      0.86     23.48     0.037
+  17                 150.00     90.00     -3.87      0.61      6.97     0.033
+  18                 150.00    130.00     22.84      1.72     33.40     0.029
+  19                 250.00     90.00     -7.53      1.18     25.71     0.032
+  21                 150.00     60.00     -1.03      0.37      4.45     0.039
+  22                 150.00     90.00      6.21      0.98     17.60     0.033
+  23                 200.00     90.00      8.10      1.27     29.72     0.032
+  24                 140.00     60.00      2.36      0.83     22.12     0.037
+  25                 200.00    140.00     18.74      1.22     15.31     0.028
+  20                 250.00    110.00    -13.67      1.44     29.11     0.030
+  26                 200.00    130.00     15.76      1.19     16.04     0.029
+   ---------------------------------------------------------------------------
+ 
+Network successfully designed for minimum pressure pmin = 12 m at all network nodes.
+ 
+------------------------------------------------------------------------------
+ 
+Copyright 2017 Stergios Emmanouil and Andreas Langousis                           
+                                                                                  
+Licensed under the Apache License, Version 2.0 (the "License");                   
+you may not use this file except in compliance with the License                   
+You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software               
+distributed under the License is distributed on an "AS IS" BASIS,                 
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.          

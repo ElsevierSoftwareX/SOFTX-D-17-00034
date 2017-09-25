@@ -1,0 +1,48 @@
+*******************************************************************
+*                        U P S t r e a m                          *
+* Automated Hydraulic Design of Pressurized Water Supply Networks *
+*           (Based on EPANET 2.0 Computational Engine)            *
+*            Stergios Emmanouil and Andreas Langousis             *
+*                Department of Civil Engineering                  *
+*                 University of Patras, Greece                    *
+*******************************************************************
+
+Copyright 2017 Stergios Emmanouil and Andreas Langousis                           
+                                                                                  
+Licensed under the Apache License, Version 2.0 (the "License");                   
+you may not use this file except in compliance with the License                   
+You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software               
+distributed under the License is distributed on an "AS IS" BASIS,                 
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+Installation instructions for C Compiler (Windows) 
+**************************************************
+1) Download and install SDK7.1 (or later) for Windows.
+2) In case SDK7.1 fails to install, from Control Panel, remove C++ redistributable 2010 (both x86 and x64). 
+   SDK7.1 will reinstall them during the process.
+3) Run command 'mex -setup' in MATLAB’s Command Window.
+4) Select the compiler corresponding to  the Microsoft Software Development Kit (SDK) installed in (1)
+
+
+Runtime instructions
+********************
+1) Download and install EPANET 2.0. 
+2) Use EPANET 2.0 GUI to create the network using LPS flow units, and save it (i.e. extension .NET).
+3) From File-> Export -> Network, export the saved .NET file in .inp format, in program's main folder.
+4) In file "UPStream_configure_and_execute.m", set: 
+   i) The name of the pipe network input (.inp) file from (3). 
+   ii) The minimum pressure (pmin) constraint for the network nodes (e.g. pmin = 0 for zero minimum pressure at all
+       network nodes, pmin = 12 for 12m of nimimum pressure).
+   iii) The maximum permissible number of successive itterations at a node of the network (If exceeded,the network 
+        is flagged as unsolvable, the program stops, and a message is printed on screen and at the end of the UPStream 
+        report file. The user should properly modify the network, or change the pmin constraint, and try again).
+   iv) Save the script.
+5) In case needed, modify the velocity constrains by opening "vmax_constraints_function.m" and customizing it 
+   according to needs; then save.
+6) In case needed, modify the way diameters are selected by opening "change_diameter_function.m" and customizing 
+   it according to needs; then save. 
+5) Execute "UPStream_configure_and_execute.m" from Matlab's Command Window. Two .txt report files, a network binary file (.bin),
+   a .mat file with MatLab's workspace, and a new network .inp file with the updated diameters,will be placed in a newly 
+   generated folder named after the original input file. Note that the original .inp file in the program's main folder remains unchanged. 
+   The user may import the newly generated .inp file to EPANET for further processsing.
